@@ -39,10 +39,7 @@ function _mergeOptions(defaults, options) {
 }
 
 function _handleResponse(response) {
-  if (response.status === 403 && typeof window !== 'undefined') {
-    // if any request comes back forbidden, redirect to root
-    window.location.href = '/';
-  } else if (response.status > 400) {
+  if (response.status > 400) {
     // if we get an error, try to jsonify and return response. if there is
     // an error when doing jsonification, just send text.
     return response.json().then(function (json) {

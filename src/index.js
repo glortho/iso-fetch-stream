@@ -34,10 +34,7 @@ function _mergeOptions( defaults: tDefaults, options: Object ) {
 }
 
 function _handleResponse( response ): void | Promise<string | Object> {
-  if ( response.status === 403 && typeof window !== 'undefined' ) {
-    // if any request comes back forbidden, redirect to root
-    window.location.href = '/';
-  } else if ( response.status > 400 ) {
+  if ( response.status > 400 ) {
     // if we get an error, try to jsonify and return response. if there is
     // an error when doing jsonification, just send text.
     return response.json()
