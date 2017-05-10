@@ -1,129 +1,27 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/Users/jed/.nvm/versions/node/v7.7.4/bin/node',
 1 verbose cli   '/Users/jed/.nvm/versions/node/v7.7.4/bin/npm',
+1 verbose cli   'run',
 1 verbose cli   'publish' ]
 2 info using npm@4.1.2
 3 info using node@v7.7.4
-4 verbose publish [ '.' ]
-5 silly cache add args [ '.', null ]
-6 verbose cache add spec .
-7 silly cache add parsed spec Result {
-7 silly cache add   raw: '.',
-7 silly cache add   scope: null,
-7 silly cache add   escapedName: null,
-7 silly cache add   name: null,
-7 silly cache add   rawSpec: '.',
-7 silly cache add   spec: '/Users/jed/git/iso-fetch-stream',
-7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/jed/.npm/fetch/0.1.0/package.tgz not in flight; packing
-9 verbose correctMkdir /Users/jed/.npm correctMkdir not in flight; initializing
-10 warn prepublish-on-install As of npm@5, `prepublish` scripts will run only for `npm publish`.
-11 warn prepublish-on-install (In npm@4 and previous versions, it also runs for `npm install`.)
-12 warn prepublish-on-install See the deprecation note in `npm help scripts` for more information.
-13 info lifecycle fetch@0.1.0~prepublish: fetch@0.1.0
-14 verbose lifecycle fetch@0.1.0~prepublish: unsafe-perm in lifecycle true
-15 verbose lifecycle fetch@0.1.0~prepublish: PATH: /Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/bin/node-gyp-bin:/Users/jed/git/iso-fetch-stream/node_modules/.bin:/Users/jed/.nvm/versions/node/v7.7.4/bin:/Users/jed/anaconda/bin:/usr/local/heroku/bin:/usr/local/bin:/Users/jed/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/jed/.rvm/bin:/Users/jed/.fzf/bin
-16 verbose lifecycle fetch@0.1.0~prepublish: CWD: /Users/jed/git/iso-fetch-stream
-17 silly lifecycle fetch@0.1.0~prepublish: Args: [ '-c', 'npm run build' ]
-18 silly lifecycle fetch@0.1.0~prepublish: Returned: code: 0  signal: null
-19 info lifecycle fetch@0.1.0~prepare: fetch@0.1.0
-20 silly lifecycle fetch@0.1.0~prepare: no script for prepare, continuing
-21 verbose tar pack [ '/Users/jed/.npm/fetch/0.1.0/package.tgz',
-21 verbose tar pack   '/Users/jed/git/iso-fetch-stream' ]
-22 verbose tarball /Users/jed/.npm/fetch/0.1.0/package.tgz
-23 verbose folder /Users/jed/git/iso-fetch-stream
-24 verbose addLocalTarball adding from inside cache /Users/jed/.npm/fetch/0.1.0/package.tgz
-25 verbose correctMkdir /Users/jed/.npm correctMkdir not in flight; initializing
-26 silly cache afterAdd fetch@0.1.0
-27 verbose afterAdd /Users/jed/.npm/fetch/0.1.0/package/package.json not in flight; writing
-28 verbose correctMkdir /Users/jed/.npm correctMkdir not in flight; initializing
-29 verbose afterAdd /Users/jed/.npm/fetch/0.1.0/package/package.json written
-30 silly publish { name: 'fetch',
-30 silly publish   version: '0.1.0',
-30 silly publish   description: 'Isomorphic fetch library with stream option',
-30 silly publish   license: 'ISC',
-30 silly publish   repository:
-30 silly publish    { type: 'git',
-30 silly publish      url: 'git+https://github.com/glortho/iso-fetch-stream.git' },
-30 silly publish   main: 'dist/index.js',
-30 silly publish   scripts:
-30 silly publish    { build: 'babel -d ./dist ./src',
-30 silly publish      'build-prod': 'NODE_ENV=production npm run build',
-30 silly publish      prepublish: 'npm run build',
-30 silly publish      test: 'echo "Error: no test specified" && exit 1' },
-30 silly publish   author: '',
-30 silly publish   devDependencies:
-30 silly publish    { 'babel-cli': '6.x',
-30 silly publish      'babel-plugin-transform-flow-strip-types': '^6.22.0',
-30 silly publish      'babel-preset-es2015': '^6.24.1',
-30 silly publish      'babel-preset-stage-1': '^6.24.1',
-30 silly publish      'react-hot-loader': '^3.0.0-beta.6' },
-30 silly publish   dependencies: { 'isomorphic-fetch': '^2.2.1', oboe: '^2.1.2' },
-30 silly publish   gitHead: 'fe1bc82ebb2c631c297326b8321d50ee024c9d9b',
-30 silly publish   bugs: { url: 'https://github.com/glortho/iso-fetch-stream/issues' },
-30 silly publish   readme: 'ERROR: No README data found!',
-30 silly publish   homepage: 'https://github.com/glortho/iso-fetch-stream#readme',
-30 silly publish   _id: 'fetch@0.1.0',
-30 silly publish   _shasum: '952e08dfe1c1d8c287aac18110af5a5dfb867f5f',
-30 silly publish   _from: '.' }
-31 info lifecycle fetch@0.1.0~prepublishOnly: fetch@0.1.0
-32 silly lifecycle fetch@0.1.0~prepublishOnly: no script for prepublishOnly, continuing
-33 verbose getPublishConfig undefined
-34 silly mapToRegistry name fetch
-35 silly mapToRegistry using default registry
-36 silly mapToRegistry registry https://registry.npmjs.org/
-37 silly mapToRegistry data Result {
-37 silly mapToRegistry   raw: 'fetch',
-37 silly mapToRegistry   scope: null,
-37 silly mapToRegistry   escapedName: 'fetch',
-37 silly mapToRegistry   name: 'fetch',
-37 silly mapToRegistry   rawSpec: '',
-37 silly mapToRegistry   spec: 'latest',
-37 silly mapToRegistry   type: 'tag' }
-38 silly mapToRegistry uri https://registry.npmjs.org/fetch
-39 verbose publish registryBase https://registry.npmjs.org/
-40 silly publish uploading /Users/jed/.npm/fetch/0.1.0/package.tgz
-41 verbose request uri https://registry.npmjs.org/fetch
-42 verbose request sending authorization for write operation
-43 info attempt registry request try #1 at 9:36:59 AM
-44 verbose request using bearer token for auth
-45 verbose request id 25db2ef4b4af541d
-46 http request PUT https://registry.npmjs.org/fetch
-47 http 403 https://registry.npmjs.org/fetch
-48 verbose headers { 'content-type': 'application/json',
-48 verbose headers   'cache-control': 'max-age=300',
-48 verbose headers   'content-length': '99',
-48 verbose headers   'accept-ranges': 'bytes',
-48 verbose headers   date: 'Wed, 10 May 2017 13:36:59 GMT',
-48 verbose headers   via: '1.1 varnish',
-48 verbose headers   connection: 'keep-alive',
-48 verbose headers   'x-served-by': 'cache-iad2123-IAD',
-48 verbose headers   'x-cache': 'MISS',
-48 verbose headers   'x-cache-hits': '0',
-48 verbose headers   'x-timer': 'S1494423419.100811,VS0,VE560',
-48 verbose headers   vary: 'Accept-Encoding' }
-49 verbose request invalidating /Users/jed/.npm/registry.npmjs.org/fetch on PUT
-50 error publish Failed PUT 403
-51 verbose stack Error: you do not have permission to publish "fetch". Are you logged in as the correct user? : fetch
-51 verbose stack     at makeError (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:304:12)
-51 verbose stack     at CachingRegistryClient.<anonymous> (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:292:14)
-51 verbose stack     at Request._callback (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:212:14)
-51 verbose stack     at Request.self.callback (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/request/request.js:186:22)
-51 verbose stack     at emitTwo (events.js:106:13)
-51 verbose stack     at Request.emit (events.js:194:7)
-51 verbose stack     at Request.<anonymous> (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/request/request.js:1081:10)
-51 verbose stack     at emitOne (events.js:96:13)
-51 verbose stack     at Request.emit (events.js:191:7)
-51 verbose stack     at IncomingMessage.<anonymous> (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/request/request.js:1001:12)
-52 verbose statusCode 403
-53 verbose pkgid fetch
-54 verbose cwd /Users/jed/git/iso-fetch-stream
-55 error Darwin 15.6.0
-56 error argv "/Users/jed/.nvm/versions/node/v7.7.4/bin/node" "/Users/jed/.nvm/versions/node/v7.7.4/bin/npm" "publish"
-57 error node v7.7.4
-58 error npm  v4.1.2
-59 error code E403
-60 error you do not have permission to publish "fetch". Are you logged in as the correct user? : fetch
-61 error If you need help, you may report this error at:
-61 error     <https://github.com/npm/npm/issues>
-62 verbose exit [ 1, true ]
+4 verbose stack Error: missing script: publish
+4 verbose stack     at run (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/lib/run-script.js:151:19)
+4 verbose stack     at /Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/lib/run-script.js:61:5
+4 verbose stack     at /Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+4 verbose stack     at checkBinReferences_ (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+4 verbose stack     at final (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+4 verbose stack     at then (/Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+4 verbose stack     at /Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/read-package-json/read-json.js:311:12
+4 verbose stack     at /Users/jed/.nvm/versions/node/v7.7.4/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at tryToString (fs.js:449:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:436:12)
+5 verbose cwd /Users/jed/git/iso-fetch-stream
+6 error Darwin 15.6.0
+7 error argv "/Users/jed/.nvm/versions/node/v7.7.4/bin/node" "/Users/jed/.nvm/versions/node/v7.7.4/bin/npm" "run" "publish"
+8 error node v7.7.4
+9 error npm  v4.1.2
+10 error missing script: publish
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
