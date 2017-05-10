@@ -1,5 +1,5 @@
 {
-  "name": "fetch",
+  "name": "iso-fetch-stream",
   "version": "0.1.0",
   "description": "Isomorphic fetch library with stream option",
   "license": "MIT",
