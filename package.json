@@ -10,6 +10,7 @@
   "scripts": {
     "build": "babel -d ./dist ./src",
     "build-prod": "NODE_ENV=production npm run build",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
