@@ -42,6 +42,6 @@ function abortableStream(options) {
       clearAbortable(this);
     });
     trackAbortable(reqId, request);
-    return Promise.resolve(request);
+    return request;
   }
 }
