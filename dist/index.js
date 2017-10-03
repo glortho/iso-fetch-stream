@@ -38,6 +38,8 @@ function _mergeOptions(defaults, options) {
   });
 }
 
+var shouldLog = mode === 'development' && typeof window !== 'undefined';
+
 function _handleResponse(response) {
   if (response.status > 400) {
     // if we get an error, try to jsonify and return response. if there is
@@ -47,7 +49,7 @@ function _handleResponse(response) {
     }).catch(function () {
       return { response: response.statusText, code: response.status };
     }).then(function (results) {
-      if (mode === 'development') {
+      if (shouldLog) {
         console.error(emoji.error + ' Fetch error: ' + response.url, results);
       }
       return results;
@@ -58,12 +60,12 @@ function _handleResponse(response) {
     var contentType = response.headers.get('content-type');
     var results = contentType && ~contentType.indexOf('application/json') ? response.json() : response.text();
     return results.then(function (res) {
-      if (mode === 'development') {
+      if (shouldLog) {
         console.log(emoji.down + ' Fetch response: ' + response.url, res);
       }
       return res;
     }).catch(function (err) {
-      if (mode === 'development') {
+      if (shouldLog) {
         console.error(emoji.error + ' Fetch error: ' + response.url, err);
       }
     });
@@ -78,7 +80,7 @@ function _fetch(defaults) {
     if (isIE) {
       url += (~url.indexOf('?') ? '&cache=' : '?') + String(Date.now());
     }
-    if (mode === 'development') {
+    if (shouldLog) {
       console.log(emoji.up + ' Fetch request: ' + url, mergedOptions);
     }
     return fetch(url, mergedOptions).then(function (response) {
