@@ -131,6 +131,7 @@ function init( { cookie = null, makeUrl = url => url, ...otherOptions }: { cooki
 
     stream( { url, method = 'GET', body = {}, abortable = false }: { url: string, method: string, body: Object, abortable?: boolean } ) {
       const options = { url: makeUrl( url ), body, method, withCredentials: true };
+      if ( cookie ) options.headers = { Cookie: cookie };
       const request = abortable ? abortableStream( options ) : oboe( options );
       // for isomorphic app, we need to return a promise and don't care so much
       // about streaming, which is for user's benefit anyway
